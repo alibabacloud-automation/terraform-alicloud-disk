@@ -1,5 +1,5 @@
-Alicloud ECS Instance Terraform Module In VPC
-terraform-alicloud-ecs-instance
+Alicloud ECS Instance Terraform Module In VPC  
+terraform-alicloud-disk
 =====================================================================
 
 Terraform module which creates several ECS disks and attach them to one specified ECS instance on Alibaba Cloud.
