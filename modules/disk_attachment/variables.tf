@@ -4,7 +4,7 @@ variable "disk_count" {
 
 variable "disk_ids" {
   description = "A list ECS disks ID."
-  type        = "list"
+  type        = list(string)
 }
 
 variable "instance_id" {
@@ -15,3 +15,4 @@ variable "attach_disk" {
   description = "Whether to attach disks to one instance"
   default     = false
 }
+

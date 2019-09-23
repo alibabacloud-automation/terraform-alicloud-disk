@@ -1,3 +1,8 @@
+variable "region" {
+  description = "The region used to launch this module resources."
+  default     = ""
+}
+
 variable "availability_zone" {
   description = "The available zone to launch ecs disks. Default from data source `alicloud_zones`."
   default     = ""
@@ -21,7 +26,7 @@ variable "size" {
 
 variable "tags" {
   description = "Used to mark specified ecs data disks."
-  type        = "map"
+  type        = map(string)
 
   default = {
     created_by   = "Terraform"
@@ -48,3 +53,4 @@ variable "attach_disk" {
   description = "Whether to attach disks to one instance"
   default     = false
 }
+
