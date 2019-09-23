@@ -21,7 +21,7 @@ variable "size" {
 
 variable "tags" {
   description = "Used to mark specified ecs data disks. Name will be merged into tags automactially."
-  type        = "map"
+  type        = map(string)
 
   default = {
     created_by   = "Terraform"
@@ -38,3 +38,4 @@ variable "disk_count" {
   description = "Number of disks to launch."
   default     = 1
 }
+
