@@ -7,8 +7,8 @@ data "alicloud_zones" "this" {
 resource "alicloud_disk" "this" {
   count = var.disk_count
 
-  availability_zone = var.availability_zone == "" ? data.alicloud_zones.this.zones[0].id : var.availability_zone
-  name              = var.disk_count < 2 ? var.name : format("%s%s", var.name, format("%02d", count.index + 1))
+  zone_id           = var.availability_zone == "" ? data.alicloud_zones.this.zones[0].id : var.availability_zone
+  disk_name         = var.disk_count < 2 ? var.name : format("%s%s", var.name, format("%02d", count.index + 1))
   category          = var.category
   size              = var.size
   encrypted         = var.encrypted
