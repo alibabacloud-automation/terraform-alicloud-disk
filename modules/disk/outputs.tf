@@ -9,21 +9,21 @@ output "disk_ids" {
 }
 
 output "name" {
-  value = alicloud_disk.this[0].name
+  value = alicloud_disk.this.*.name
 }
 
 output "category" {
-  value = alicloud_disk.this[0].category
+  value = alicloud_disk.this.*.category
 }
 
 output "size" {
-  value = alicloud_disk.this[0].size
+  value = alicloud_disk.this.*.size
 }
 
 output "tags" {
-  value = alicloud_disk.this[0].tags
+  value = alicloud_disk.this.*.tags
 }
 
 output "encrypted" {
-  value = alicloud_disk.this[0].encrypted
+  value = alicloud_disk.this.*.encrypted
 }
