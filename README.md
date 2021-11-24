@@ -67,9 +67,76 @@ You can use this in your terraform template with the following steps.
 | this_disk_ids | List of disks ID |
 | this_availability_zone | The zone ID of the ECS disks belongs to |
 
+## Notes
+From the version v1.5.0, the module has removed the following `provider` setting:
+
+```hcl
+provider "alicloud" {
+   version              = ">=1.56.0"
+   region               = var.region != "" ? var.region : null
+   configuration_source = "terraform-alicloud-modules/disk"
+}
+```
+
+If you still want to use the `provider` setting to apply this module, you can specify a supported version, like 1.4.0:
+
+```hcl
+module "disks" {
+   source     = "terraform-alicloud-modules/disk/alicloud"
+   version    = "1.4.0"
+   region     = "cn-beijing"
+   disk_count = 2
+   name       = "disk-exapmle"
+   // ...
+}
+```
+
+If you want to upgrade the module to 1.5.0 or higher in-place, you can define a provider which same region with
+previous region:
+
+```hcl
+provider "alicloud" {
+   region = "cn-beijing"
+}
+module "disks" {
+   source     = "terraform-alicloud-modules/disk/alicloud"
+   disk_count = 2
+   name       = "disk-exapmle"
+   // ...
+}
+```
+or specify an alias provider with a defined region to the module using `providers`:
+
+```hcl
+provider "alicloud" {
+   region = "cn-beijing"
+   alias  = "bj"
+}
+module "disks" {
+   source     = "terraform-alicloud-modules/disk/alicloud"
+   providers  = {
+      alicloud = alicloud.bj
+   }
+   disk_count = 2
+   name       = "disk-exapmle"
+   // ...
+}
+```
+
+and then run `terraform init` and `terraform apply` to make the defined provider effect to the existing module state.
+
+More details see [How to use provider in the module](https://www.terraform.io/docs/language/modules/develop/providers.html#passing-providers-explicitly)
+
+## Terraform versions
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.0 |
+| <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | >= 1.56.0 |
+
 Authors
 -------
-Created and maintained by He Guimin(@xiaozhu36, heguimin36@163.com)
+Created and maintained by Alibaba Cloud Terraform Team(terraform@alibabacloud.com)
 
 Reference
 ---------
