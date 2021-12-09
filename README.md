@@ -1,6 +1,5 @@
 Alicloud ECS Disk Terraform Module On Alibaba Cloud 
 terraform-alicloud-disk
-=====================================================================
 
 Terraform module which creates several ECS disks and attach them to one specified ECS instance on Alibaba Cloud.
 
@@ -45,8 +44,6 @@ You can use this in your terraform template with the following steps.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
 | availability_zone | The available zone to launch ecs disks. Default from data source `alicloud_zones`. | string | - | no |
