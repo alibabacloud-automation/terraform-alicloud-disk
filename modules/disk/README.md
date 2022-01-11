@@ -16,5 +16,10 @@
 
 | Name | Description |
 |------|-------------|
-| availability_zone | Availability zone ID|
+| availability_zone | The zone ID of the ECS disks belongs to|
 | disk_ids | A list IDs of disks |
+| name | Name of the ECS disk |
+| category | Category of the disk |
+| size | The data disk size used to launch one or more data disks |
+| tags | Used to mark specified ecs data disks |
+| encrypted | Whether to encrypt the disks |
