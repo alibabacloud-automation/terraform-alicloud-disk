@@ -1,14 +1,8 @@
 # Disk variables
-variable "availability_zone" {
-  description = "The available zone to launch ecs disks. Default from data source `alicloud_zones`."
-  type        = string
-  default     = ""
-}
-
 variable "name" {
-  description = "Name used on all disks as prefix. Like TF_ECS_Disk-1, TF_ECS_Disk-2."
+  description = "Name used on all disks as prefix. Like TF-ECS-Disk-1, TF-ECS-Disk-2."
   type        = string
-  default     = ""
+  default     = "TF_ECS_Disk-1"
 }
 
 variable "category" {
@@ -26,21 +20,8 @@ variable "size" {
 variable "tags" {
   description = "Used to mark specified ecs data disks. Name will be merged into tags automactially."
   type        = map(string)
-
   default = {
     created_by   = "Terraform"
     created_from = "module-terraform-alicloud-disk"
   }
-}
-
-variable "encrypted" {
-  description = "Whether to encrypt the disks"
-  type        = bool
-  default     = false
-}
-
-variable "disk_count" {
-  description = "Number of disks to launch."
-  type        = number
-  default     = 1
 }

@@ -63,6 +63,11 @@ You can use this in your terraform template with the following steps.
 |------|-------------|
 | this_disk_ids | List of disks ID |
 | this_availability_zone | The zone ID of the ECS disks belongs to |
+| this_name | Name of the ECS disk |
+| this_category | Category of the disk |
+| this_size | The data disk size used to launch one or more data disks |
+| this_tags | Used to mark specified ecs data disks |
+| this_disk_count | Whether to encrypt the disks |
 
 ## Notes
 From the version v1.5.0, the module has removed the following `provider` setting:
@@ -128,7 +133,7 @@ More details see [How to use provider in the module](https://www.terraform.io/do
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.12.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.0 |
 | <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | >= 1.56.0 |
 
 Authors
