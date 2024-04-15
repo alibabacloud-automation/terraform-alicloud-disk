@@ -12,7 +12,7 @@ output "disk_ids" {
 
 output "name" {
   description = "Name of the ECS disk."
-  value       = concat(alicloud_disk.this.*.name, [""])[0]
+  value       = concat(alicloud_disk.this.*.disk_name, [""])[0]
 }
 
 output "category" {
