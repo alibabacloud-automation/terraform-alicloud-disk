@@ -1,9 +1,9 @@
-// Zones data source for availability_zone
+# Zones data source for availability_zone
 data "alicloud_zones" "this" {
   available_disk_category = var.category
 }
 
-// ECS Disk Resource for Module
+# ECS Disk Resource for Module
 resource "alicloud_disk" "this" {
   count = var.disk_count
 
