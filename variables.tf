@@ -1,8 +1,3 @@
-variable "region" {
-  description = "(Deprecated from version 1.5.0) The region used to launch this module resources."
-  type        = string
-  default     = ""
-}
 
 # Disk variables
 variable "availability_zone" {
