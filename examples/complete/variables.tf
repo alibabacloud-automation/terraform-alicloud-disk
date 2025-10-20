@@ -8,7 +8,7 @@ variable "name" {
 variable "category" {
   description = "The data disk category used to launch one or more data disks."
   type        = string
-  default     = "cloud_efficiency"
+  default     = "cloud_essd"
 }
 
 variable "size" {
