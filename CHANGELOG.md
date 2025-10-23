@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/alibabacloud-automation/terraform-alicloud-disk/compare/v2.0.0...v2.0.1) (2025-10-23)
+
+
+### Bug Fixes
+
+* improve the examples ([a41522e](https://github.com/alibabacloud-automation/terraform-alicloud-disk/commit/a41522ed1ec9406acb1187172c0eda089e0816aa))
+
 ## 2.1.0 (Unreleased)
 ## 2.0.0 (2025-03-14)
 
