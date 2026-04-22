@@ -116,6 +116,7 @@ More details see [How to use provider in the module](https://www.terraform.io/do
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_alicloud"></a> [alicloud](#requirement\_alicloud) | >= 1.200.0 |
 
 ## Providers
 
@@ -145,7 +146,7 @@ No resources.
 | <a name="input_instance_id"></a> [instance\_id](#input\_instance\_id) | The ID of ECS instance. | `string` | `""` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name used on all disks as prefix. Like TF\_ECS\_Disk-1, TF\_ECS\_Disk-2. | `string` | `""` | no |
 | <a name="input_size"></a> [size](#input\_size) | The data disk size used to launch one or more data disks. | `string` | `"40"` | no |
-| <a name="input_tags"></a> [tags](#input\_tags) | Used to mark specified ecs data disks. Name will be merged into tags automactially. | `map(string)` | <pre>{<br>  "created_by": "Terraform",<br>  "created_from": "module-terraform-alicloud-disk"<br>}</pre> | no |
+| <a name="input_tags"></a> [tags](#input\_tags) | Used to mark specified ecs data disks. Name will be merged into tags automactially. | `map(string)` | <pre>{<br/>  "created_by": "Terraform",<br/>  "created_from": "module-terraform-alicloud-disk"<br/>}</pre> | no |
 
 ## Outputs
 
